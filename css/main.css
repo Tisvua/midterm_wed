@@ -1,0 +1,451 @@
+body {
+  /* color: var(--default-color) !important; */
+  font-family: var(--default-font) !important;
+  position: relative;
+}
+
+.body-background {
+  background-image: url(https://img5.thuthuatphanmem.vn/uploads/2022/01/11/anh-nen-trang-tinh-khoi_013900337.jpg);
+  background-size: cover;
+}
+
+h1 strong {
+  font-size: 70px !important;
+}
+
+h2 strong {
+  font-size: 50px !important;
+}
+
+h3 strong {
+  font-size: 40px !important;
+}
+
+.title {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: TopSlide 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes TopSlide {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.title-bottom {
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: botSlide 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes botSlide {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.sub-title-left {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: leftSlide 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes leftSlide {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.sub-title-right {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: rightSlide 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes rightSlide {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.page-home {
+  opacity: 0;
+  animation: page_home 2s ease forwards;
+  animation-delay: 0, 5s;
+}
+@keyframes page_home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* HOME  */
+.typing-text {
+  display: inline-block;
+}
+.typing-text p {
+  overflow: hidden;
+  font-size: 35px !important;
+  font-weight: 700;
+  border-right: 0.15em solid #fad02c;
+  white-space: nowrap;
+  animation: typing 10s infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+  margin: 0px 10px;
+}
+
+a:hover {
+  color: black !important;
+  text-decoration: none !important;
+}
+.logo {
+  max-width: 230px;
+}
+
+.active {
+  color: #fad02c !important;
+}
+.active .img {
+  color: #040401 !important;
+}
+/* HOME  */
+
+/* HOME CONTACT RESUME */
+.nav-item ul li a {
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  transition: 0.5s;
+}
+
+.nav-item ul li a::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item ul li a:hover::before {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px #fad02c;
+}
+
+.nav-item ul li a:hover {
+  color: #fad02c;
+  text-shadow: 0 0 5px #fad02c;
+}
+
+/* HOME CONTACT RESUME */
+/* LINK SOCIAL  */
+
+.header-social-links ul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #000000;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #000000;
+  transition: 0.5s;
+}
+
+.header-social-links li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.header-social-links a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fad02c;
+}
+
+.header-social-links a:hover {
+  color: #fad02c;
+  text-shadow: 0 0 5px #fad02c;
+}
+/* LINK SOCIAL  */
+
+/* THÂN BÀI  */
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 82px);
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    min-height: calc(100vh - 68px);
+  }
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: black;
+}
+
+.btn-get-started {
+  color: black;
+  background: #fad02c;
+  /* font-family: var(--heading-font); */
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px !important;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.btn-get-started:hover {
+  color: #fad02c !important ;
+  background: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0, 5s linear;
+  margin-top: 10px;
+}
+
+/* THÂN BÀI */
+/* KẾT BÀI  */
+.footer {
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 7px;
+  font-size: 16px;
+}
+
+.footer .credits {
+  margin-top: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+/* KẾT BÀI  */
+
+/* TRANg ABOUT  */
+/* THÂN BÀI TRANG ABOUT  */
+.logo-1 {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.about-body-title h1,
+.about-body-title h2,
+.about-body-title p {
+  text-align: center;
+}
+/* GẠCH CHÂN H1  */
+.section-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h1 :after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #fad02c;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+/* GẠCH CHÂN H1  */
+/* test  */
+.about-body-3 img {
+  max-width: 200px;
+  border-radius: 100%;
+  align-items: center !important;
+  align-content: center !important;
+}
+.carousel-item p,
+.carousel-item h3,
+.carousel-item .img {
+  text-align: center;
+  align-items: center;
+}
+
+.about-body-1 strong {
+  font-size: 25px;
+}
+.about-body-1 span {
+  font-size: 20px;
+}
+
+.about-body-1 h2 strong:first-child {
+  font-size: 50px;
+}
+
+.about-body-1-subtitle p {
+  font-size: 25px;
+}
+
+.about-body-2-star {
+  display: flex;
+  justify-content: center;
+}
+
+/* THÂN BÀI TRANG ABOUT  */
+/* TRANg ABOUT  */
+
+/* TRANG RESUME  */
+/* THÂN BÀI TRÀN RESUME  */
+.resume {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 3px solid #fad02c;
+  position: relative;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: white;
+  border: 2px solid #fad02c;
+}
+
+.resume-body-1-subtitle p {
+  font-size: 25px;
+}
+.resume-body-2-subtitle p {
+  font-size: 20px;
+}
+
+.resume-body-2-subtitle li,
+.resume-body-1-subtitle strong {
+  font-size: 19px;
+}
+/* THÂN BÀI TRÀN RESUME  */
+/* TRANG RESUME  */
+
+/* TRANG CONTACT  */
+/* THÂN BÀI 2 TRÁI  */
+.contact-body-2 {
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.contact-body-2-left {
+  font-size: 20px;
+}
+/* THÂN BÀI 2 TRÁI  */
+/* TRANG CONTACT  */
+
+/* test  */
+
+/* test  */
